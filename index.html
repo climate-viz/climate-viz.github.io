@@ -1,0 +1,253 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="https://use.typekit.net/nyy1paq.css">
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/cocoen.min.css" />
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <div class="preloader"></div>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <img src="img/logo2.png" class="logo"/>
+                
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <section>
+                    <h5>comparison</h5>
+                <div class="map"  id="map-1">
+                    <div class="cocoen">
+                        <img id="preimage" src="img/pre1.png" alt="">
+                        <img id="postimage" src="img/post1.png" alt="">
+                      </div>
+                      <div class="map-bottom">
+                          <h2>Use the slider to compare</h2>
+                          <h3><b>Left</b> side is original  <b>Right</b> side is generated</h3>
+                      </div>
+                </div>
+                
+
+            </section>
+
+            <section>
+                <h5>Explore more images</h5>
+                <div class="buttons" >
+                    <div class="button active" id="button-1">
+                        <img src="img/pre1.png" id="map1-button"/>
+                        <p>Example 1</p>
+                    </div>
+                    <div class="button" id="button-2">
+                        <img src="img/1-pre.png" id="map2-button"/>
+                        <p>Example 2</p>
+                    </div>
+                    <div class="button" id="button-3">
+                        <img src="img/2-pre.png" id="map3-button"/>
+                        <p>Example 3</p>
+                    </div>
+                    <div class="button" id="button-4">
+                        <img src="img/3-pre.png" id="map4-button"/>
+                        <p>Example 4</p>
+                    </div>
+                    <div class="button" id="button-5">
+                        <img src="img/4-pre.png" id="map5-button"/>
+                        <p>Example 5</p>
+                    </div>
+                    <div class="button" id="button-6">
+                        <img src="img/5-pre.png" id="map6-button"/>
+                        <p>Example 6</p>
+                    </div>
+                    <div class="button" id="button-7">
+                        <img src="img/6-pre.png" id="map7-button"/>
+                        <p>Example 7</p>
+                    </div>
+                    <div class="button" id="button-8">
+                        <img src="img/7-pre.png" id="map8-button"/>
+                        <p>Example 8</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h5>about eie</h5>
+            <div class="about">
+                <p>
+                    
+                    Earth Intelligence Engine is a <a href="http://frontierdevelopmentlab.org/">FDL 2020</a> project that aims to help city planners communicate more effectively, more visually, and more intuitively about flood risks to support climate resilient infrastructure development.<br><br> We have created the first physically-consistent, photorealistic visualization of coastal floods by applying GANs to Earth Science, and developing a way to ensure physical consistency from GAN-generated images.
+                </p>
+            </div>
+                
+
+        </section>
+                
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <!-- <h3>footer</h3> -->
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <!-- <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script> -->
+        <script src="js/vendor/cocoen.min.js"></script>
+        <script src="js/vendor/cocoen-jquery.min.js"></script>
+        <script src="js/main.js"></script>
+        
+
+     
+        <script>
+
+        $(window).load(function() {
+            $('.cocoen').cocoen();
+            $('.preloader').fadeOut("fast", function(){
+
+          
+
+            });
+        });
+
+        $( document ).ready(function() {
+            console.log( "doc ready!" );
+            
+
+           
+
+            $("#button-1").click(function(){
+                $("#preimage").attr("src","img/pre1.png");
+                $("#postimage").attr("src","img/post1.png");
+                
+
+                $("#button-1").addClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").removeClass("active");
+
+
+            });
+            $("#button-2").click(function(){
+                $("#preimage").attr("src","img/1-pre.png");
+                $("#postimage").attr("src","img/1-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").addClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").removeClass("active");
+
+                
+            });
+            $("#button-3").click(function(){
+                $("#preimage").attr("src","img/2-pre.png");
+                $("#postimage").attr("src","img/2-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").addClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").removeClass("active");
+            });
+            $("#button-4").click(function(){
+                $("#preimage").attr("src","img/3-pre.png");
+                $("#postimage").attr("src","img/3-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").addClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").removeClass("active");
+            });
+            $("#button-5").click(function(){
+                $("#preimage").attr("src","img/4-pre.png");
+                $("#postimage").attr("src","img/4-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").addClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").removeClass("active");
+            });
+            $("#button-6").click(function(){
+                $("#preimage").attr("src","img/5-pre.png");
+                $("#postimage").attr("src","img/5-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").addClass("active");
+                $("#button-7").removeClass("active");
+                $("#button8").removeClass("active");
+            });
+            $("#button-7").click(function(){
+                $("#preimage").attr("src","img/6-pre.png");
+                $("#postimage").attr("src","img/6-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").addClass("active");
+                $("#button-8").removeClass("active");
+            });
+            $("#button-8").click(function(){
+                $("#preimage").attr("src","img/7-pre.png");
+                $("#postimage").attr("src","img/7-gen.jpg");
+
+                $("#button-1").removeClass("active");
+                $("#button-2").removeClass("active");
+                $("#button-3").removeClass("active");
+                $("#button-4").removeClass("active");
+                $("#button-5").removeClass("active");
+                $("#button-6").removeClass("active");
+                $("#button-7").removeClass("active");
+                $("#button-8").addClass("active");
+            });
+        });
+           
+            
+
+            
+        </script>
+    </body>
+</html>
